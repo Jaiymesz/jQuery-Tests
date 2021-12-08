@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jQuery Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            body {font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+            .code { font-family: monospace; background: #ffeff0; color: darkgreen; word-wrap: break-word; box-decoration-break: clone; padding: .1rem .3rem .2rem; border-radius: .2rem;}
+            ul li {line-height: 1.3rem;}
+            button { appearance: none; background-color: #FAFBFC; border: 1px solid rgba(27, 31, 35, 0.15); border-radius: 6px; box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset; box-sizing: border-box; color: #24292E; cursor: pointer; display: inline-block; font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; font-size: 14px; font-weight: 500; line-height: 20px; list-style: none; padding: 6px 16px; position: relative; transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1); user-select: none; -webkit-user-select: none; touch-action: manipulation; vertical-align: middle; white-space: nowrap; word-wrap: break-word; } button:hover { background-color: #F3F4F6; text-decoration: none; transition-duration: 0.1s; } button:disabled { background-color: #FAFBFC; border-color: rgba(27, 31, 35, 0.15); color: #959DA5; cursor: default; } button:active { background-color: #EDEFF2; box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset; transition: none 0s; } button:focus { outline: 1px transparent; } button:before { display: none; } button:-webkit-details-marker { display: none; }
+        </style>
+    </head>
+    <body>
+
+        <h1>jQuery DOM Manipulation </h1>        
+
+        <!-- Below is the only HTML you need to use in the tasks, do *NOT* adjust this HTML in any way -->
+
+        <button id="button1">Continue >></button>
+        <button id="button2">Almost there >></button>
+        <button id="button3">Yay! Click to see my cat =]</button>
+        <p id="cat">
+            <img src="https://c.files.bbci.co.uk/151AB/production/_111434468_gettyimages-1143489763.jpg"><br/>
+            <button id="button4">Start Again</button> 
+        </p>
+
+        <!-- This is your Javascript File - create this locally -->
+        <script src="./jQueryTest.js"></script>
+
+        <!-- Below are the tasks - No need to worry about below! -->
+        <hr/>
+        <p>You should create a Javascript file called <span class="code">jQueryTest.js</span> locally to this HTML file - all code should be in this file. Do not edit this HTML document.</span></p>
+        <h2>Task 1</h2>
+        <ul>
+            <li>On page load, hide <span class="code">#button2</span>, <span class="code">#button3</span>, and <span class="code">#cat</span></li>
+            <li>Make <span class="code">#button1</span> when clicked display <span class="code">#button2</span></li>
+            <li>Make <span class="code">#button2</span> when clicked display <span class="code">#button3</span></li>
+            <li>Make <span class="code">#button3</span> when clicked display <span class="code">#cat</span></li>
+            <li>Make <span class="code">#button4</span> when clicked hide <span class="code">#button2</span>, <span class="code">#button3</span>, and <span class="code">#cat</span></li>
+        </ul>
+
+        <h2>Task 2</h2>
+        <ul>
+            <li>Add the attribute <span class="code">disabled</span> to buttons when they have been clicked.</li>
+            <li>When <span class="code">#button4</span> is clicked, ensure all buttons are re-enabled again.</li>
+        </ul>
+
+        <h2>Task 3</h2>
+        <ul>
+            <li>When buttons appear, make them fade in instead of instantly appear.</li>
+            <li>When <span class="code">#cat</span> appears, make it slide down instead of instantly appear.</li>
+            <li>When <span class="code">#button4</span> is clicked, make <span class="code">#cat</span> slide up, and <span class="code">#button2</span>/<span class="code">#button3</span> fade out.</li>
+        </ul>
+
+        <h2>Task 4</h2>
+        <ul>
+            <li>When <span class="code">#cat</span> slides down, make the slide down animate slower.</li>
+            <li>When <span class="code">#button4</span> is clicked, make <span class="code">#cat</span> slide up first, only once hidden, then fade out <span class="code">#button3</span>, and again once hidden, only then fade out <span class="code">#button2</span>.</li>
+        </ul>
+
+        <h2>Task 5</h2>
+        <ul>
+            <li>When the image of the cat is clicked, change the image to another cat - do <u>NOT</u> set an ID to the image.</li>
+        </ul>
+
+        <h2>Task 6</h2>
+        <ul>
+            <li>Create an array of 5 cat image URL's.</li>
+            <li>When the cat is clicked, slide up the cat, and slide down a random new image of a cat from your array - this can be called unlimited times.</li>
+        </ul>
+
+        <h2>Task 7</h2>
+        <ul>
+            <li>5 seconds after <span class="code">#button3</span> is clicked, dynamically (in jQuery) add a new button after <span class="code">#button4</span> with the id <span class="code">#button5</span> with the value "I prefer dogs"</li>
+            <li>When <span class="code">#button5</span> is clicked, slide up the cat image and slide down a random dog image.</li>
+        </ul>
+
+        <h2>Task 8</h2>
+        <ul>
+            <li>Go to Delhaize and buy a crate of Kasteel Rouge</li>
+            <li>Hand deliver this to James Morris dressed as Santa Clause.</li>
+            <li>Arno Mastyn must give James Morris five "no questions asked" film night credits.</li>
+        </ul>
+    </body>
+</html>
