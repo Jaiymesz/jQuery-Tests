@@ -23,11 +23,11 @@ $(document).ready(function() {
         $(this).attr("disabled",true);
         $("#cat").slideDown(1000);
         
-        if(!$("#button5").length){
-            setTimeout(function(){
-                $("#button4").after("&nbsp; <button id='button5'>I prefer dogs</button");              
-            }, 5000);
-        }
+        setTimeout(function(){
+            if(!$("#button5").length){
+                $("#button4").after("&nbsp; <button id='button5'>I prefer dogs</button"); 
+            }             
+        }, 5000);
     });
 
     $("#button4").click(function(){
