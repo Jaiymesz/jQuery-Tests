@@ -23,17 +23,11 @@ $(document).ready(function() {
         $(this).attr("disabled",true);
         $("#cat").slideDown(1000);
         
-        setTimeout(function(){
-            if(!$("#button5").length){
-                $("#button4").after("&nbsp; <button id='button5'>I prefer dogs</button");
-                $(document).on("click","#button5", function(){    
-                    $("#cat").slideUp(function(){               
-                         $("#cat > img").attr("src","https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_samoyed_desktop.jpg?h=475&la=en&w=825&hash=141A7757B0B0C4925227669C085DDA69");
-                         $("#cat").slideDown(1000);
-                    });
-                });
-            }
-        }, 5000);
+        if(!$("#button5").length){
+            setTimeout(function(){
+                $("#button4").after("&nbsp; <button id='button5'>I prefer dogs</button");              
+            }, 5000);
+        }
     });
 
     $("#button4").click(function(){
@@ -43,6 +37,14 @@ $(document).ready(function() {
                 $("#button2").fadeOut();
             });
             $("#cat > img").attr("src","https://c.files.bbci.co.uk/151AB/production/_111434468_gettyimages-1143489763.jpg");
+        });
+    });
+
+    // As #button5 doesn't yet exist, we use document event tracking to detect the click instead of attaching the click to the non-existent element.
+    $(document).on("click","#button5", function(){    
+        $("#cat").slideUp(function(){               
+                $("#cat > img").attr("src","https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_samoyed_desktop.jpg?h=475&la=en&w=825&hash=141A7757B0B0C4925227669C085DDA69");
+                $("#cat").slideDown(1000);
         });
     });
 
