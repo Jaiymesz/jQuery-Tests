@@ -26,8 +26,11 @@ $(document).ready(function() {
         setTimeout(function(){
             if(!$("#button5").length){
                 $("#button4").after("&nbsp; <button id='button5'>I prefer dogs</button");
-                $(document).on("click","#button5", function(){                    
-                    $("#cat > img").attr("src","https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_samoyed_desktop.jpg?h=475&la=en&w=825&hash=141A7757B0B0C4925227669C085DDA69");
+                $(document).on("click","#button5", function(){    
+                    $("#cat").slideUp(function(){               
+                         $("#cat > img").attr("src","https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_samoyed_desktop.jpg?h=475&la=en&w=825&hash=141A7757B0B0C4925227669C085DDA69");
+                         $("#cat").slideDown(1000);
+                    });
                 });
             }
         }, 5000);
