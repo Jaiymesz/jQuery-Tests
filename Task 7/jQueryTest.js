@@ -25,7 +25,7 @@ $(document).ready(function() {
         
         setTimeout(function(){
             if(!$("#button5").length){
-                $("#button4").after("&nbsp; <button id='button5'>I prefer dogs</button"); 
+                $("#button4").after("&nbsp; <button id='button5'>I prefer dogs</button>"); 
             }             
         }, 5000);
     });
