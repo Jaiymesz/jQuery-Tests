@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     $("#cat > img").click(function(){
         $("#cat").slideUp(function(){               
-            $("#cat > img").attr("src",catImages[Math.floor(Math.random() * 5)]);
+            $("#cat > img").attr("src",catImages[Math.floor(Math.random() * catImages.length)]);
             $("#cat").slideDown(1000);
         });
     })
